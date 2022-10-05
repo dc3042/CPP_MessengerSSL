@@ -16,6 +16,7 @@ Docker is now installed and the image has been built. The source code / binaries
 docker run -p 443:443 -it server_tree
 ```
 This will start your container and enter the container's shell.
+
 2) cd to '/home/server_tree'
 3) Run 
 ```
@@ -41,6 +42,7 @@ replacing the container ID value found in step 2. This obtains the IP address fo
 ./bin/getcert 172.17.0.2
 ```
 replacing the IP address found from the steps above.
+
 3) Enter the chosen user's ID (e.g. addleness)
 4) Enter the chosen user's password (e.g. Cardin_pwns)
 5) You will see a 200 OK response on the client side with the certificate returned from the server. On the server terminal, you will see the user who requested the certificate followed by the corresponding public key.
@@ -54,6 +56,7 @@ replacing the IP address found from the steps above.
 ./bin/sendmsg 172.17.0.2 analects
 ```
 replacing the IP address found from the steps above.
+
 2) Enter password for addleness, the one sending the message ('Cardin_pwns')
 3) Enter whatever message you like.
 
@@ -63,6 +66,7 @@ replacing the IP address found from the steps above.
 ```
 ./bin/recvmsg 172.17.0.2
 ```
+
 4) Enter the password for analects (pickerel_symbiosis). The message will appear and be deleted from the server. Attempting this again will return no message since it was deleted.
 
 Note that the sendmsg program can take multiple recipients as arguments. You will just have to create a tree for each of those users, and run the getcert command within each user tree before attempting to send messages to them.
